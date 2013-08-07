@@ -3,7 +3,6 @@ get '/' do
 end
 
 get '/:word' do
-  p params
   @user_word = params[:word]
   @anagrams = Word.anagrams(@user_word)
   erb :index
